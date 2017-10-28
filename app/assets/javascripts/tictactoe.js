@@ -8,9 +8,9 @@ $(document).ready(function() {
 });
 
 function attachListeners() {
-  $('td').on('click', function() { // Attach click to all of table
-    if (!$.text(this) && !checkWinner()) { // if there is no text and the game hasn't been won
-      doTurn(this); // doTurn on element that was clicked
+  $('td').on('click', function() {
+    if (!$.text(this) && !checkWinner()) {
+      doTurn(this);
     }
   });
   $('#previous').on('click', function() {
