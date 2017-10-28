@@ -54,15 +54,13 @@ function setMessage(string) {
 }
 
 function checkWinner() {
-  var board = {}; // get board to compare to
+  var board = {};
   var winner = false;
 
-  // Fill board with data
   $('td').map(function(index, square) {
     board[index] = square.innerHTML;
   })
 
-  // Compare the board to win combinations
   for (combo of winCombination) {
     if (board[combo[0]] !== "" && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
       setMessage(`Player ${board[combo[0]]} Won!`)
